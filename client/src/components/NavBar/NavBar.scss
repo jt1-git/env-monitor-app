@@ -1,0 +1,43 @@
+.navbar {
+  width: 100%;
+  background-color: var(--umd-red);
+  position: sticky;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  &__container {
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__logo {
+    width: 52px;
+    height: 52px;
+    
+  }
+
+  &__nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__link {
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff; 
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &--active {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+  }
+}

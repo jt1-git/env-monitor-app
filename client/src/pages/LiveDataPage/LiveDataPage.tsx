@@ -1,7 +1,12 @@
+import Dashboard from '../../components/DashBoard/Dashboard'
 import './LiveDataPage.scss'
 
 const LiveDataPage = () => {
-  return <div className="live-data-page">Live Data Page</div>
+  return (
+  
+    <Dashboard />
+
+  )
 }
 
 export default LiveDataPage

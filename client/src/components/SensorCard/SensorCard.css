@@ -1,0 +1,13 @@
+.card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:12px; display:flex; flex-direction:column; gap:8px; cursor:pointer; }
+.card__top { display:flex; justify-content:space-between; align-items:center; }
+.card__title { font-weight:600; }
+.card__loc { display:flex; align-items:center; gap:6px; color:#6b7280; font-size:12px; }
+.card__locText { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.card__metrics { display:flex; justify-content:space-between; gap:8px; }
+.metric { display:flex; flex-direction:column; font-size:12px; }
+.metric__label { color:#6b7280; }
+.metric__value { font-weight:700; }
+.metric-ok .metric__value { }
+.metric-warn .metric__value { color:#b45309; }  /* amber */
+.metric-bad  .metric__value { color:#dc2626; }  /* red */
+.card__ping { color:#6b7280; font-size:12px; }

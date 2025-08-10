@@ -3,6 +3,7 @@ import MainLayout from './layouts/MainLayout/MainLayout'
 import LiveDataPage from './pages/LiveDataPage/LiveDataPage'
 import ChartsPage from './pages/ChartsPage/ChartsPage'
 import MapPage from './pages/MapPage/MapPage'
+import SensorDetailsPage from './pages/SensorDetailsPage/SensorDetailsPage';
 
 function App() {
   return (
@@ -13,11 +14,12 @@ function App() {
         <Route index element={<Navigate to="/live" replace />} />
         <Route path="live" element={<LiveDataPage />} />
         <Route path="charts" element={<ChartsPage />} />
+        <Route path="charts/:id" element={<SensorDetailsPage />} />
         <Route path="map" element={<MapPage />} />
       </Route>
     </Routes>
 
-    
+
   </>
   )
 }

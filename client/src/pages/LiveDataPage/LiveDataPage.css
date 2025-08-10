@@ -1,0 +1,10 @@
+.livePage { padding:16px; display:flex; flex-direction:column; gap:16px; }
+.livePage__header h1 { font-family: "Courier New", Courier, monospace; }
+.livePage__header p { color:#6b7280; font-family: "Courier New", Courier, monospace; }
+.livePage__overview { display:grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap:12px; }
+.stat { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:12px; display:flex; justify-content:space-between; }
+.stat__label { color:#6b7280; }
+.stat__value { font-weight:700; }
+.livePage__search input { width:100%; padding:10px; border-radius:10px; border:1px solid #e5e7eb; }
+.livePage__grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:12px; }
+.livePage__loading { color:#6b7280; }

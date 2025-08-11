@@ -1,0 +1,12 @@
+.chart {
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: calc(50% - 0.5em);
+    width: calc(50% - 0.5em);
+    height: 25em;
+    border: 2px solid #e5e7eb;
+    border-radius: 2em;
+    padding-left: 20px;
+    padding-top: 20px;
+}

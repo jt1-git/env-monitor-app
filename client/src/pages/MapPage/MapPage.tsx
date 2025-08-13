@@ -1,4 +1,3 @@
-import './MapPage.scss'
 import { useCallback, useEffect, useState } from 'react'
 import {
     APIProvider,

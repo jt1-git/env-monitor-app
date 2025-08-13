@@ -14,11 +14,18 @@ export interface MetricReading {
   ts: number;     // unix ms
 }
 
+// A interface that holds the latitude and longitude for a sensor
+export interface Coordinates {
+  lat: number,
+  lng: number
+}
+
 // One physical box
 export interface SensorBox {
   id: string;           // e.g. "Pi1052"
   name: string;         // display name
   location: string;     // "Building A - Floor 2"
+  coordinates: Coordinates;
   online: boolean;
   metrics: MetricReading[]; // latest readings (one per kind)
   lastPingTs: number;

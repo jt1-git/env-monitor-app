@@ -4,15 +4,27 @@ import cors from 'cors';
 const app = express();
 app.use(cors());
 
-
 type SensorKind = 'co2' | 'pm25' | 'temperature' | 'humidity' | 'pressure';
 
 interface MetricReading {
   kind: SensorKind; value: number; unit: string; ts: number;
 }
+
+interface Coordinates {
+  lat: number,
+  lng: number
+}
+
+// Random coordinates for the three sensors
+const defaultCoords = [
+  {lat: 38.915750602147256, lng: -77.01765851349417},
+  {lat: 38.90172492815918, lng: -77.11404637250807},
+  {lat: 38.875536256226994, lng: -76.93826514184661}
+]
+
 interface SensorBox {
-  id: string; name: string; location: string; online: boolean; lastPingTs: number;
-  metrics: MetricReading[];
+  id: string; name: string; location: string; coordinates: Coordinates, 
+  online: boolean; lastPingTs: number; metrics: MetricReading[];
 }
 // Add new sensor boxes here for demo purposes
 let boxes: SensorBox[] = [
@@ -20,6 +32,7 @@ let boxes: SensorBox[] = [
     id: 'Pi1049',
     name: 'Pi1049',
     location: 'University of Maryland - Roof',
+    coordinates: defaultCoords[0],
     online: true,
     lastPingTs: Date.now(),
     metrics: [
@@ -34,6 +47,7 @@ let boxes: SensorBox[] = [
     id: 'Pi1052',
     name: 'Pi1052',
     location: 'NIST - Building 1',
+    coordinates: defaultCoords[1],
     online: true,
     lastPingTs: Date.now(),
     metrics: [
@@ -48,6 +62,7 @@ let boxes: SensorBox[] = [
     id: 'Pi533',
     name: 'Pi533',
     location: 'University of Maryland - Floor 2',
+    coordinates: defaultCoords[2],
     online: true,
     lastPingTs: Date.now(),
     metrics: [

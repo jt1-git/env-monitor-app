@@ -10,22 +10,17 @@ const NavBar = () => {
         <nav className="navbar__nav">
           <NavLink
             to="/live"
-            className="navbar__link"
-            activeClassName="navbar__link--active"
+            className={({ isActive }) =>
+              isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
+            }
           >
             Live Data
           </NavLink>
           <NavLink
-            to="/charts"
-            className="navbar__link"
-            activeClassName="navbar__link--active"
-          >
-            Charts
-          </NavLink>
-          <NavLink
             to="/map"
-            className="navbar__link"
-            activeClassName="navbar__link--active"
+            className={({ isActive }) =>
+              isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
+            }
           >
             Map
           </NavLink>
